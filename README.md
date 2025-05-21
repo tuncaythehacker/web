@@ -1,2 +1,1 @@
-# web
-tuncay
+Webdida niye sorgulayirsan
