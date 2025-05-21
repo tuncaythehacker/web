@@ -19,7 +19,6 @@ h1 {
   margin-bottom: 20px;
   font-size: 32px;
 }
-
 /* Container for the switch */
 .toggle-switch {
   display: flex;
@@ -29,6 +28,8 @@ h1 {
   margin-bottom: 30px;
   font-size: 16px;
 }
+/*Easter egg qoyuram "Nizami Arazoglu"*/
+
 
 /* Switch (on/off button) style */
 .switch {
@@ -65,6 +66,7 @@ h1 {
   border-radius: 50%;
 }
 
+/* Easter Egg 2: Burdan Ayhana salam */
 /* When switch is active (checked) */
 input:checked + .slider {
   background-color: #6657f3;
@@ -183,5 +185,3 @@ hr {
     width: 90%;
   }
 }
-/* Comments writtten by chatGPT */
-/* Codes written by Tunjay :) */
