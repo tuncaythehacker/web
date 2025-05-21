@@ -1,0 +1,187 @@
+/* Reset all spacing and box sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic style for page */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f8f9ff;
+  color: #333;
+  padding: 30px 20px;
+}
+
+/* Big title style */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+/* Container for the switch */
+.toggle-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* Switch (on/off button) style */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0; /* hide default checkbox */
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* grey background */
+  transition: .4s; /* animation time */
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* When switch is active (checked) */
+input:checked + .slider {
+  background-color: #6657f3;
+}
+input:checked + .slider:before {
+  transform: translateX(26px); /* move circle to right */
+}
+
+/* Card layout (flexbox) */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Single card style */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card animation when mouse is over */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Special card (Professional) */
+.featured {
+  background: linear-gradient(135deg, #6657f3, #7b6df9);
+  color: white;
+}
+
+/* Price style */
+.price {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+/* Line between sections */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* List of features */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+/* Style for each feature */
+.feature-list li {
+  background: #f2f2ff;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  position: relative;
+  font-size: 15px;
+  padding-left: 30px;
+}
+
+/* Green check mark before each feature */
+.feature-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #6657f3;
+  font-size: 14px;
+}
+
+/* Button style */
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #6657f3;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Button hover effect */
+.card button:hover {
+  background: #5345d8;
+}
+
+/* Special button for featured card */
+.featured button {
+  background: white;
+  color: #6657f3;
+}
+.featured button:hover {
+  background: #f1efff;
+}
+
+/* Responsive design: For mobile and small screens */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+/* Comments writtten by chatGPT */
+/* Codes written by Tunjay :) */
